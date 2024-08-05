@@ -1,0 +1,105 @@
+# Single Page View
+    ## Introduction
+    The single page views allow information for an Adviser / Company to be viewed independently. This page will go over the logic for both Adviser & Company views to provide details where needed.
+
+    ## Adviser
+    The Adviser single page view is made up of the following parts:
+
+        ### Blocks
+            * single-adviser
+                * _single-adviser.scss
+                * single-adviser.php
+                * single-adviser.js
+        ### Components
+            * single-adviser-heading
+                * _single-adviser-heading.scss
+                * single-adviser-heading.php
+            * single-adviser-information
+                * _single-adviser-information.scss
+                * single-adviser-information.php
+            * single-adviser-tabs
+                * _single-adviser-tabs.scss
+                * single-adviser-tabs.php
+
+        ### Heading
+            Provides the view with the following information:
+            |     Field     |    Type   |
+            |---------------|-----------|
+            | Company Title |   Always  |
+            | Company URL   |  Dynamic  |
+            | Company Logo  |   Always  |
+
+            Dynamic fields are only shown if they contain information.
+
+        ### Information
+            Provides the view with the following information:
+            |     Field     |    Type   |
+            |---------------|-----------|
+            |  Profile Image |  Dynamic  |
+            |      Name     |   Always  |
+            |      Email    |  Dynamic  |
+            |      Phone    |  Dynamic  |
+
+            Dynamic fields are only shown if they contain information.
+
+        ### Tabs
+            The tabs component contains three separate 'tabs' of information.
+
+            #### About
+                About provides an 'about' of the adviser and is the tab shown by default.
+
+            #### Locations
+                There is multiple outputs for the Locations of an adviser.
+                1. If adviser has a location within their data - display this location.
+                2. Else Get the branches that the adviser belongs to and display them.
+
+            #### Services
+                Services provides information about the services in which this Adviser has.
+
+    ## Company
+        The Company single page view is made up of the following parts:
+
+        ### Blocks
+            * single-company
+                * _single-company.scss
+                * single-company.php
+                * single-company.js
+        ### Components
+            * single-company-heading
+                * _single-company-heading.scss
+                * single-company-heading.php
+            * single-company-information
+                * _single-company-information.scss
+                * single-company-information.php
+            * single-company-tabs
+                * _single-company-tabs.scss
+                * single-company-tabs.php
+
+        ### Heading
+            Provides the view with the following information:
+            |     Field     |    Type   |
+            |---------------|-----------|
+            | Company Title |   Always  |
+            | Company URL   |  Dynamic  |
+            | Company Logo  |   Always  |
+
+            Dynamic fields are only shown if they contain information.
+
+        ### Information
+            Provides the view with the following information:
+            |     Field     |    Type   |
+            |---------------|-----------|
+            |      Email    |   Always  |
+            |      Phone    |   Always  |
+
+            Dynamic fields are only shown if they contain information.
+
+        ### Tabs
+            #### About
+                About provides an 'about' of the company and is the tab shown by default.
+
+            #### Locations
+                If a company has any branches it will display their locations
+
+            #### Services
+                Services provides information about the services in which this company has.
